@@ -1,0 +1,17 @@
+<center>
+  <h1>Projects</h1>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Project_Id</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @emprojs.each do |e|%>
+        <tr>
+          <td><%= e.project.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</center>

@@ -1,0 +1,11 @@
+<center>
+  <h1>New Projects</h1>
+
+  <%= form_for @project do |form|%>
+    <%= form.text_field :name %><br>
+    <% @project.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    <%= form.submit %>
+  <% end %>
+</center>

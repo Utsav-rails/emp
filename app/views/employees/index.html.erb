@@ -1,0 +1,29 @@
+<center>
+  <h1><td>Employee</td></h1>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Show</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @employees.each do |employee|%>
+        <tr>
+          <td><%= employee.name %></td>
+          
+          <td><%= link_to 'Edit', edit_employee_path(employee.id), method: :get %></td>
+          <td><%= link_to 'Delete', delete_employee_path(employee.id), method: :delete %></td>
+          <td><%= link_to 'Show', employee_path(employee.id), method: :get %></td>
+        </tr>  
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'Employee', employee_path %>
+  <br>
+  <%= link_to 'New Emp', new_employee_path %>
+  <br>
+  <%= link_to 'Project', projects_path %>

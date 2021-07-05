@@ -1,0 +1,11 @@
+<center>
+  <h1>New Employees</h1>
+
+  <%= form_for @employee do |form|%>
+    <%= form.text_field :name %><br>
+    <% @employee.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+    <%= form.submit %>
+  <% end %>
+</center>
